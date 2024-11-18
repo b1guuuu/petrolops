@@ -61,7 +61,13 @@ class ServicesPageState extends State<HomePage> {
           _editFormNavigation = _showServiceDetails;
       }
     });
-    _fetchServices();
+    try {
+      _fetchServices();
+
+      await DatabaseReplicator().sync(_fetchServices);
+    } catch (e) {
+      print(e);
+    }
   }
 
   Future<void> _getAll() async {
@@ -161,8 +167,8 @@ class ServicesPageState extends State<HomePage> {
 
   Future<void> _triggerSync() async {
     try {
-      //await DatabaseReplicator().sync(_fetchServices);
-      BrokerConsumer().consume();
+      //BrokerConsumer().consume();
+      await _fetchServices();
     } catch (e) {
       print(e);
     }

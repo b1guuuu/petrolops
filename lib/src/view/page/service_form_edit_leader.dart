@@ -131,7 +131,7 @@ class ServiceFormEditLeaderPageState extends State<ServiceFormEditLeaderPage> {
                       children: [
                         const Center(
                           child: Text(
-                            'Insira as informações do novo serviço',
+                            'Atualizar as informações do serviço',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 24),
                           ),

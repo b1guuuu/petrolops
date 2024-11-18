@@ -104,7 +104,7 @@ class ServiceFormEditSupervisorPageState
                       children: [
                         const Center(
                           child: Text(
-                            'Atualize as informações do serviço',
+                            'Atualizar as informações do serviço',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 24),
                           ),
